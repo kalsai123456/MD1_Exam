@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+
+  let arr = [12,23,3,5,62,6];
+  function insertNumberToArray(array,x,index) {
+      let arrayResult = [];
+      if (index >= 0 && index < array.length) {
+          for (let i = 0; i < array.length; i++) {
+              if (i !== index) {
+                  arrayResult.push(array[i]);
+              } else {
+                  arrayResult.push(x);
+                  arrayResult.push(array[i]);
+              }
+          }
+      } else {
+          return array;
+      }
+      return arrayResult;
+  }
+  num = insertNumberToArray(arr,16,6)
+
+  document.write('Mang moi la: ' + num)
+
+</script>
+</body>
+</html>
